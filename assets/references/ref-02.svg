@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
 <defs>
-<linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#f8f9fa"/><stop offset="1" stop-color="#dfe3e8"/></linearGradient>
+<linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#f7f7f6"/><stop offset="1" stop-color="#dedbd5"/></linearGradient>
 <linearGradient id="m" x1="0" x2="1"><stop offset="0" stop-color="#f8f9fa"/><stop offset=".52" stop-color="#cbd1d9"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
 <filter id="sd"><feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000" flood-opacity=".16"/></filter>
 </defs>
@@ -9,12 +9,12 @@
 <polygon points="650,0 730,0 520,700 440,700" fill="#fff" opacity=".32"/>
 <polygon points="785,0 840,0 625,700 570,700" fill="#fff" opacity=".18"/>
 <g filter="url(#sd)">
-<rect x="362" y="235" width="240" height="210" rx="26" fill="url(#m)"/>
-<rect x="400" y="272" width="160" height="96" rx="18" fill="#111319"/>
-<rect x="424" y="296" width="112" height="50" rx="10" fill="#25282d"/>
-<circle cx="480" cy="321" r="18" fill="#bca47c"/>
-<rect x="417" y="390" width="126" height="38" rx="12" fill="#1b1d22"/>
-<rect x="442" y="404" width="76" height="12" rx="6" fill="#bca47c"/>
+<rect x="346" y="235" width="240" height="210" rx="26" fill="url(#m)"/>
+<rect x="384" y="272" width="160" height="96" rx="18" fill="#111319"/>
+<rect x="408" y="296" width="112" height="50" rx="10" fill="#25282d"/>
+<circle cx="464" cy="321" r="18" fill="#bca47c"/>
+<rect x="401" y="390" width="126" height="38" rx="12" fill="#1b1d22"/>
+<rect x="426" y="404" width="76" height="12" rx="6" fill="#bca47c"/>
 </g>
-<text x="58" y="612" font-family="Arial" font-size="38" font-weight="700" fill="#15181d" opacity=".78">构图美学</text>
+<text x="58" y="612" font-family="Arial" font-size="38" font-weight="700" fill="#222222" opacity=".78">Oracle Touch</text>
 </svg>

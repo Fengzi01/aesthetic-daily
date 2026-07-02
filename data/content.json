@@ -4,50 +4,50 @@
     "items": [
       {
         "category": "光影之美",
-        "title": "窗影与留白",
-        "desc": "光影的方向决定空间的情绪，留白让画面更克制。",
+        "title": "窗影切割空间",
+        "desc": "用窗影制造秩序，让画面从普通变得有结构。",
         "image": "assets/recs/rec-01.svg"
       },
       {
         "category": "色彩灵感",
-        "title": "低饱和器物",
-        "desc": "金属、米白、浅灰，空间更干净更高级。",
+        "title": "冷灰与金属",
+        "desc": "低饱和灰、银白、黑色屏幕，适合科技产品气质。",
         "image": "assets/recs/rec-02.svg"
       },
       {
         "category": "构图美学",
-        "title": "主次关系",
-        "desc": "抬高构图重心，让主体更突出，背景更安静。",
+        "title": "主体偏移",
+        "desc": "主体不一定居中，右侧留白能让画面更像广告。",
         "image": "assets/recs/rec-03.svg"
       },
       {
-        "category": "生活类美",
-        "title": "一杯奶咖",
-        "desc": "慢下来，感受生活细节，质感往往来自克制。",
+        "category": "生活美学",
+        "title": "一杯咖啡的尺度",
+        "desc": "小道具负责生活气息，但不能抢产品的主角位置。",
         "image": "assets/recs/rec-04.svg"
       },
       {
         "category": "电影瞬间",
-        "title": "雾林层次",
-        "desc": "氛围感来自光与空气的层次，而不是复杂元素。",
+        "title": "雾气与层次",
+        "desc": "氛围不是靠复杂元素，而是靠空气、距离和光的层次。",
         "image": "assets/recs/rec-05.svg"
       }
     ]
   },
   "inspiration": {
-    "title": "孤独之树",
-    "author": "Julian Palacios",
-    "text1": "雾气、山峦、孤树。",
-    "text2": "它站在水中央，安静而稳定。最简单的画面，往往最有力量。",
-    "image": "assets/inspiration/lone-tree.svg"
+    "title": "雾中的几何",
+    "author": "Aesthetic OS",
+    "text1": "冷灰、留白、秩序。",
+    "text2": "画面越简单，越需要控制光、比例和边缘。",
+    "image": "assets/inspiration/inspiration-01.svg"
   },
   "quote": {
-    "en": "Don't chase light. Understand light.",
-    "cn": "不要追逐光，先理解光。"
+    "en": "Clean is not empty. Clean is controlled.",
+    "cn": "干净不是空，而是被控制过。"
   },
   "selection": [
     {
-      "title": "Photography by Clément Falize",
+      "title": "Photography",
       "desc": "冷静、克制、薄雾般的色彩层次。",
       "image": "assets/curated/sel-01.svg"
     },
@@ -72,64 +72,109 @@
       "image": "assets/curated/sel-05.svg"
     }
   ],
+  "productReferences": {
+    "update": "07.02 · 18:30 更新",
+    "items": [
+      {
+        "type": "半自动咖啡机",
+        "brand": "La Marzocco",
+        "name": "Linea Mini",
+        "tag": "金属 / 留白 / 家用专业感",
+        "reason": "适合参考银白机身、工业线条和干净台面的关系。",
+        "image": "assets/references/ref-01.svg",
+        "source": "La Marzocco Home",
+        "url": "https://home.lamarzoccousa.com/linea-mini/"
+      },
+      {
+        "type": "半自动咖啡机",
+        "brand": "Breville",
+        "name": "Oracle Touch",
+        "tag": "屏幕 / 金属 / 自动化",
+        "reason": "适合参考黑色屏幕、金属正面和家用场景的结合。",
+        "image": "assets/references/ref-02.svg",
+        "source": "Breville",
+        "url": "https://www.breville.com/en-us/product/bes990"
+      },
+      {
+        "type": "全自动咖啡机",
+        "brand": "JURA",
+        "name": "Z10",
+        "tag": "高级全自动 / 冷灰 / 屏幕界面",
+        "reason": "适合参考全自动机器的前脸比例、屏幕和黑银材质对比。",
+        "image": "assets/references/ref-03.svg",
+        "source": "JURA",
+        "url": "https://www.jura.com/"
+      },
+      {
+        "type": "全自动咖啡机",
+        "brand": "De'Longhi",
+        "name": "Eletta Explore",
+        "tag": "家用全自动 / 白银配色",
+        "reason": "适合参考轻家用场景、饮品系统和清爽产品表达。",
+        "image": "assets/references/ref-04.svg",
+        "source": "De'Longhi",
+        "url": "https://www.delonghi.com/"
+      }
+    ]
+  },
   "days": [
     {
       "date": "2026-07-02",
       "metaDate": "2026 / 07 / 02 · 周四",
       "am": {
-        "themeCn": "清晨的办公室空气感",
-        "themeEn": "Clean Morning Office",
+        "themeCn": "清晨金属冷白",
+        "themeEn": "Clean Metal Morning",
         "product": "F15",
         "principle": "先让空间干净，产品才会显得高级。",
-        "trainingDesc": "训练明亮、干净、简洁的办公室画面。",
+        "trainingDesc": "今天只训练一个方向：冷白自然光、金属边缘和干净桌面。",
         "training": [
           {
-            "title": "观察光线",
-            "text": "先看自然光方向，再决定产品放置位置。"
+            "title": "观察力训练",
+            "text": "先看自然光方向，再判断产品应该放在亮部还是暗部边缘。"
           },
           {
-            "title": "理解空间",
-            "text": "只留下必要道具，让画面更整洁。"
+            "title": "空间感训练",
+            "text": "把道具减到最少，让桌面和背景建立秩序。"
           },
           {
-            "title": "拍摄思路",
-            "text": "保留留白，让主体更清晰。"
+            "title": "构图训练",
+            "text": "主体不要顶满画面，保留可呼吸的空白区域。"
           },
           {
-            "title": "色彩情绪",
-            "text": "控制白色和木色，避免过黄。"
+            "title": "色彩训练",
+            "text": "白、银、冷灰、黑四种颜色足够，不再加杂色。"
           }
         ],
-        "caseTitle": "F15 白色版｜清晨办公室案例",
-        "caseText": "木桌、冷白自然光、轻留白构图，传递干净、轻盈的办公气质。",
+        "caseTitle": "F15 白色版｜清晨金属冷白案例",
+        "caseText": "冷白自然光、银白机身、简洁桌面，建立干净、轻盈、稳定的办公气质。",
         "image": "assets/cases/f15-office-am.svg"
       },
       "pm": {
-        "themeCn": "温暖的办公空间",
-        "themeEn": "Warm Office Lighting",
+        "themeCn": "金属感办公空间",
+        "themeEn": "Minimal Metal Office",
         "product": "F15",
-        "principle": "光不是照亮产品，而是塑造空间。",
+        "principle": "干净不是空，而是每个元素都有理由。",
         "trainingDesc": "今天只训练一个方向：干净、金属感、简洁场景。",
         "training": [
           {
-            "title": "观察光线",
-            "text": "先看光从哪里来，再决定产品放在哪里。"
+            "title": "观察力训练",
+            "text": "捕捉金属表面的细节，判断光泽与材质变化。"
           },
           {
-            "title": "理解空间",
-            "text": "只保留能说明场景的元素，让产品自然存在。"
+            "title": "空间感训练",
+            "text": "理解空间层次与留白，提升画面秩序感。"
           },
           {
-            "title": "拍摄思路",
-            "text": "主体不必填满画面，留白是高级感的一部分。"
+            "title": "构图训练",
+            "text": "学习简洁构图法则，平衡视觉引导。"
           },
           {
-            "title": "色彩情绪",
-            "text": "用浅灰、米白、金属感建立干净克制的画面。"
+            "title": "色彩训练",
+            "text": "掌握金属色与中性色营造高级感。"
           }
         ],
-        "caseTitle": "F15 白色版｜办公室空气感案例",
-        "caseText": "木质桌面、百叶光影、银白机感，传递通透而克制的办公氛围。",
+        "caseTitle": "F15 白色版｜金属感办公空间案例",
+        "caseText": "用冷灰、银白、黑色屏幕和少量桌面道具，建立干净、可靠、科技感的产品气质。",
         "image": "assets/cases/f15-office-pm.svg"
       }
     },
@@ -165,31 +210,31 @@
         "image": "assets/cases/f15-office-am.svg"
       },
       "pm": {
-        "themeCn": "余晖轻商务",
-        "themeEn": "Soft Sunset Business",
+        "themeCn": "冷灰百叶光影",
+        "themeEn": "Cool Gray Blinds Light",
         "product": "F15",
-        "principle": "柔和不是随意，是控制。",
-        "trainingDesc": "训练柔和晚间氛围和产品质感。",
+        "principle": "光影负责情绪，留白负责高级感。",
+        "trainingDesc": "训练冷灰空间中的光影秩序。",
         "training": [
           {
-            "title": "看晚光",
-            "text": "先找有温度但不过黄的光。"
+            "title": "找光影",
+            "text": "先找墙面的光影节奏，不急着摆产品。"
           },
           {
-            "title": "控白色",
-            "text": "避免白机被暖光污染。"
+            "title": "控主体",
+            "text": "产品位置要稳，不要被光影切得太乱。"
           },
           {
-            "title": "压高光",
-            "text": "保住白色产品细节。"
+            "title": "留空白",
+            "text": "右侧或上方保留干净区域。"
           },
           {
-            "title": "减反差",
-            "text": "避免过于生硬的黑白对比。"
+            "title": "压对比",
+            "text": "暗部要有细节，不要变成死黑。"
           }
         ],
-        "caseTitle": "F15 白色版｜余晖轻商务案例",
-        "caseText": "柔和暖光、稳定构图、金属与白色对比更有层次。",
+        "caseTitle": "F15 白色版｜冷灰百叶光影案例",
+        "caseText": "让百叶光影落在墙面和台面，产品只吃到边缘光，画面会更有秩序。",
         "image": "assets/cases/f15-office-pm.svg"
       }
     }

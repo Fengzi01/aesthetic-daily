@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="620" viewBox="0 0 800 620"><rect width="800" height="620" fill="#e9e6e1"/><rect x="368" y="320" width="92" height="118" rx="36" fill="#7e7b79"/><line x1="414" y1="180" x2="414" y2="320" stroke="#bda784" stroke-width="3"/><line x1="414" y1="220" x2="390" y2="258" stroke="#bda784" stroke-width="3"/><line x1="414" y1="236" x2="444" y2="276" stroke="#bda784" stroke-width="3"/><line x1="414" y1="260" x2="386" y2="296" stroke="#bda784" stroke-width="3"/><line x1="414" y1="276" x2="446" y2="310" stroke="#bda784" stroke-width="3"/><circle cx="390" cy="258" r="8" fill="#d7c09f"/><circle cx="444" cy="276" r="8" fill="#d7c09f"/><circle cx="386" cy="296" r="8" fill="#d7c09f"/><circle cx="446" cy="310" r="8" fill="#d7c09f"/><rect x="496" y="404" width="34" height="34" rx="8" fill="#e2d3ba"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+<defs>
+<linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#edf2f5"/><stop offset="1" stop-color="#aab6c2"/></linearGradient>
+<linearGradient id="m" x1="0" x2="1"><stop offset="0" stop-color="#f8f9fa"/><stop offset=".52" stop-color="#cbd1d9"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+<filter id="sd"><feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000" flood-opacity=".16"/></filter>
+</defs>
+<rect width="1000" height="700" fill="url(#g)"/>
+<rect x="0" y="470" width="1000" height="230" fill="#ffffff" opacity=".30"/>
+<polygon points="650,0 730,0 520,700 440,700" fill="#fff" opacity=".32"/>
+<polygon points="785,0 840,0 625,700 570,700" fill="#fff" opacity=".18"/>
+<g filter="url(#sd)">
+<rect x="354" y="235" width="240" height="210" rx="26" fill="url(#m)"/>
+<rect x="392" y="272" width="160" height="96" rx="18" fill="#111319"/>
+<rect x="416" y="296" width="112" height="50" rx="10" fill="#25282d"/>
+<circle cx="472" cy="321" r="18" fill="#bca47c"/>
+<rect x="409" y="390" width="126" height="38" rx="12" fill="#1b1d22"/>
+<rect x="434" y="404" width="76" height="12" rx="6" fill="#bca47c"/>
+</g>
+<text x="58" y="612" font-family="Arial" font-size="38" font-weight="700" fill="#45515d" opacity=".78">色彩灵感</text>
+</svg>

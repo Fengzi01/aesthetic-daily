@@ -1,1 +1,20 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="800" height="430" viewBox="0 0 800 430"><rect width="800" height="430" fill="#f2f2f1"/><polygon points="90,300 300,120 520,300" fill="#cfd2d6"/><polygon points="280,300 470,150 690,300" fill="#adb3ba"/><rect x="156" y="296" width="510" height="50" fill="#9099a2"/><rect x="372" y="210" width="118" height="86" fill="#17191d"/></svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="700" viewBox="0 0 1000 700">
+<defs>
+<linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#f7f7f6"/><stop offset="1" stop-color="#dedbd5"/></linearGradient>
+<linearGradient id="m" x1="0" x2="1"><stop offset="0" stop-color="#f8f9fa"/><stop offset=".52" stop-color="#cbd1d9"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
+<filter id="sd"><feDropShadow dx="0" dy="20" stdDeviation="24" flood-color="#000" flood-opacity=".16"/></filter>
+</defs>
+<rect width="1000" height="700" fill="url(#g)"/>
+<rect x="0" y="470" width="1000" height="230" fill="#ffffff" opacity=".30"/>
+<polygon points="650,0 730,0 520,700 440,700" fill="#fff" opacity=".32"/>
+<polygon points="785,0 840,0 625,700 570,700" fill="#fff" opacity=".18"/>
+<g filter="url(#sd)">
+<rect x="394" y="235" width="240" height="210" rx="26" fill="url(#m)"/>
+<rect x="432" y="272" width="160" height="96" rx="18" fill="#111319"/>
+<rect x="456" y="296" width="112" height="50" rx="10" fill="#25282d"/>
+<circle cx="512" cy="321" r="18" fill="#bca47c"/>
+<rect x="449" y="390" width="126" height="38" rx="12" fill="#1b1d22"/>
+<rect x="474" y="404" width="76" height="12" rx="6" fill="#bca47c"/>
+</g>
+<text x="58" y="612" font-family="Arial" font-size="38" font-weight="700" fill="#222222" opacity=".78">Architecture</text>
+</svg>
