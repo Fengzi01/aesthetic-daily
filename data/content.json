@@ -3,33 +3,33 @@
     "update": "07.02 · 18:30 更新",
     "items": [
       {
-        "category": "光影之美",
-        "title": "窗影切割空间",
-        "desc": "用窗影制造秩序，让画面从普通变得有结构。",
-        "image": "assets/recs/rec-01.svg"
-      },
-      {
         "category": "色彩灵感",
         "title": "冷灰与金属",
         "desc": "低饱和灰、银白、黑色屏幕，适合科技产品气质。",
-        "image": "assets/recs/rec-02.svg"
+        "image": "assets/recs/rec-01.svg"
       },
       {
         "category": "构图美学",
         "title": "主体偏移",
         "desc": "主体不一定居中，右侧留白能让画面更像广告。",
+        "image": "assets/recs/rec-02.svg"
+      },
+      {
+        "category": "光影之美",
+        "title": "窗影切割空间",
+        "desc": "用窗影制造秩序，让画面从普通变得有结构。",
         "image": "assets/recs/rec-03.svg"
       },
       {
-        "category": "生活美学",
-        "title": "一杯咖啡的尺度",
-        "desc": "小道具负责生活气息，但不能抢产品的主角位置。",
+        "category": "空间秩序",
+        "title": "水平线稳定",
+        "desc": "产品图要先稳，再谈情绪。",
         "image": "assets/recs/rec-04.svg"
       },
       {
-        "category": "电影瞬间",
-        "title": "雾气与层次",
-        "desc": "氛围不是靠复杂元素，而是靠空气、距离和光的层次。",
+        "category": "材质观察",
+        "title": "金属边缘光",
+        "desc": "边缘光能让金属产品从背景里分离出来。",
         "image": "assets/recs/rec-05.svg"
       }
     ]
@@ -42,8 +42,8 @@
     "image": "assets/inspiration/inspiration-01.svg"
   },
   "quote": {
-    "en": "Clean is not empty. Clean is controlled.",
-    "cn": "干净不是空，而是被控制过。"
+    "en": "Less information, stronger product.",
+    "cn": "信息越少，产品越强。"
   },
   "selection": [
     {
@@ -73,17 +73,27 @@
     }
   ],
   "productReferences": {
-    "update": "07.02 · 18:30 更新",
+    "update": "07.02 · Product Reference",
     "items": [
       {
-        "type": "半自动咖啡机",
-        "brand": "La Marzocco",
-        "name": "Linea Mini",
-        "tag": "金属 / 留白 / 家用专业感",
-        "reason": "适合参考银白机身、工业线条和干净台面的关系。",
-        "image": "assets/references/ref-01.svg",
-        "source": "La Marzocco Home",
-        "url": "https://home.lamarzoccousa.com/linea-mini/"
+        "type": "全自动咖啡机",
+        "brand": "De'Longhi",
+        "name": "Eletta Explore",
+        "tag": "家用全自动 / 白银配色",
+        "reason": "适合参考轻家用场景、饮品系统和清爽产品表达。",
+        "image": "assets/references/ref-04.svg",
+        "source": "De'Longhi",
+        "url": "https://www.delonghi.com/"
+      },
+      {
+        "type": "商用全自动",
+        "brand": "Eversys",
+        "name": "Cameo",
+        "tag": "商用 / 黑银 / 稳定正面",
+        "reason": "适合参考商用咖啡机的专业感与吧台比例。",
+        "image": "assets/references/ref-05.svg",
+        "source": "Eversys",
+        "url": "https://www.eversys.com/"
       },
       {
         "type": "半自动咖啡机",
@@ -104,16 +114,6 @@
         "image": "assets/references/ref-03.svg",
         "source": "JURA",
         "url": "https://www.jura.com/"
-      },
-      {
-        "type": "全自动咖啡机",
-        "brand": "De'Longhi",
-        "name": "Eletta Explore",
-        "tag": "家用全自动 / 白银配色",
-        "reason": "适合参考轻家用场景、饮品系统和清爽产品表达。",
-        "image": "assets/references/ref-04.svg",
-        "source": "De'Longhi",
-        "url": "https://www.delonghi.com/"
       }
     ]
   },
@@ -150,31 +150,31 @@
         "image": "assets/cases/f15-office-am.svg"
       },
       "pm": {
-        "themeCn": "金属感办公空间",
-        "themeEn": "Minimal Metal Office",
+        "themeCn": "银白极简场景",
+        "themeEn": "Silver Minimal Scene",
         "product": "F15",
-        "principle": "干净不是空，而是每个元素都有理由。",
+        "principle": "产品质感来自轮廓、阴影和比例。",
         "trainingDesc": "今天只训练一个方向：干净、金属感、简洁场景。",
         "training": [
           {
-            "title": "观察力训练",
-            "text": "捕捉金属表面的细节，判断光泽与材质变化。"
+            "title": "看轮廓",
+            "text": "先判断产品外轮廓是否清楚。"
           },
           {
-            "title": "空间感训练",
-            "text": "理解空间层次与留白，提升画面秩序感。"
+            "title": "看阴影",
+            "text": "阴影要轻，但不能完全没有。"
           },
           {
-            "title": "构图训练",
-            "text": "学习简洁构图法则，平衡视觉引导。"
+            "title": "看比例",
+            "text": "产品和桌面的比例决定画面是否稳定。"
           },
           {
-            "title": "色彩训练",
-            "text": "掌握金属色与中性色营造高级感。"
+            "title": "看颜色",
+            "text": "冷灰和银白要干净，不要偏脏。"
           }
         ],
-        "caseTitle": "F15 白色版｜金属感办公空间案例",
-        "caseText": "用冷灰、银白、黑色屏幕和少量桌面道具，建立干净、可靠、科技感的产品气质。",
+        "caseTitle": "F15 白色版｜银白极简场景案例",
+        "caseText": "用银白、浅灰、黑色屏幕建立产品的工业设计感，避免暖色过多。",
         "image": "assets/cases/f15-office-pm.svg"
       }
     },
