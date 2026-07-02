@@ -1,0 +1,146 @@
+{
+  "days": [
+    {
+      "date": "2026-07-02",
+      "am": {
+        "themeEn": "Clean Morning Office",
+        "themeCn": "清晨办公室空气感",
+        "todayDesc": "用冷白自然光训练办公室场景的干净度。",
+        "principle": "先让空间干净，产品才会显得高级。",
+        "observe": "先看窗边自然光，再看产品白色机身是否保持干净。",
+        "product": "F15",
+        "productReason": "F15 白色机身适合小型办公室咖啡角，重点是让它自然融入桌面环境。",
+        "scene": "办公室窗边咖啡角。浅灰墙面、木色台面、白杯、少量办公物件。",
+        "light": "左侧自然光为主，正面用白板轻补。避免机器正面过平。",
+        "lens": "35mm 或 50mm，中景。机器放左 1/3，右侧保留呼吸区。",
+        "color": "冷白偏中性，降低饱和度，保留木色但不偏黄。",
+        "quote": "Space first. Product second.",
+        "quoteCn": "先建立空间，再呈现产品。",
+        "image": "assets/cases/f15-office-am.svg",
+        "steps": [
+          {
+            "title": "找窗光",
+            "text": "选择靠窗台面，让自然光从侧后方进入。"
+          },
+          {
+            "title": "清背景",
+            "text": "移除多余办公杂物，只保留能说明场景的元素。"
+          },
+          {
+            "title": "放机器",
+            "text": "机器偏左，屏幕略微朝向镜头。"
+          },
+          {
+            "title": "统一色温",
+            "text": "后期让白墙和白机保持干净，不要发黄。"
+          }
+        ]
+      },
+      "pm": {
+        "themeEn": "Warm Office Lighting",
+        "themeCn": "晚间办公室暖光",
+        "todayDesc": "训练晚间柔光、空间情绪和白色产品质感。",
+        "principle": "光不是照亮产品，而是塑造空间。",
+        "observe": "先看墙面斜向光影，再看机器轮廓，最后看杯子和台面。",
+        "product": "F15",
+        "productReason": "白色机身适合暖灰办公室环境，但需要控制色温，避免白色发黄。",
+        "scene": "临窗办公区 / 安静会议角。木台面、白杯、少量植物，背景只保留轻微办公氛围。",
+        "light": "侧前方斜射暖光，形成墙面投影。可用百叶窗或遮幅制造更有节奏的光影。",
+        "lens": "50mm 更稳，机位略低于屏幕中心。主体偏左，右上和右侧作为呼吸区。",
+        "color": "暖灰偏米白，保留日落余晖感，但不要把白机拍黄。黑色侧板和屏幕边框要有层次。",
+        "quote": "Don't light the object. Light the space.",
+        "quoteCn": "不要只照亮物体，要照亮空间。",
+        "image": "assets/cases/f15-office-pm.svg",
+        "steps": [
+          {
+            "title": "找斜光",
+            "text": "先找有斜向光影的墙面，不急着摆机器。"
+          },
+          {
+            "title": "减道具",
+            "text": "木台面保持干净，只留一杯一刊。"
+          },
+          {
+            "title": "让光打墙",
+            "text": "光先打在墙上，再自然带到产品边缘。"
+          },
+          {
+            "title": "压高光",
+            "text": "后期轻压高光，保住白色机身细节。"
+          }
+        ]
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "am": {
+        "themeEn": "Airy Coffee Corner",
+        "themeCn": "办公室空气感",
+        "todayDesc": "训练明亮空间里的产品融入感。",
+        "principle": "先感受空气和光，再去看主体。",
+        "observe": "先看画面是否通透，再看产品是否自然存在。",
+        "product": "F15",
+        "productReason": "白色 F15 更适合空气感办公室，不适合过暗背景。",
+        "scene": "办公室茶水间 / 窗边咖啡角。浅灰墙面、木色台面、白杯、杂志、小植物。",
+        "light": "左后方 45° 柔光，正面白板轻补。",
+        "lens": "35mm 或 50mm，中景优先。机器放左 1/3。",
+        "color": "低饱和，白墙不发黄，木色不过橙。",
+        "quote": "Let the product breathe.",
+        "quoteCn": "让产品有呼吸感。",
+        "image": "assets/cases/f15-office-am.svg",
+        "steps": [
+          {
+            "title": "选角落",
+            "text": "找一个干净的窗边咖啡角。"
+          },
+          {
+            "title": "看光线",
+            "text": "优先侧后方柔光。"
+          },
+          {
+            "title": "留右侧",
+            "text": "右侧留白用于空间呼吸。"
+          },
+          {
+            "title": "少调色",
+            "text": "只做轻微统一，不做重滤镜。"
+          }
+        ]
+      },
+      "pm": {
+        "themeEn": "Soft Sunset Business",
+        "themeCn": "余晖轻商务",
+        "todayDesc": "训练柔和余晖下的商务氛围。",
+        "principle": "晚间不一定更暗，而是更柔和。",
+        "observe": "先看暖光是否柔和，再看产品白色是否被保住。",
+        "product": "F15",
+        "productReason": "F15 的白色外观适合余晖轻商务，但必须避免色温污染。",
+        "scene": "安静会议角，木台面、咖啡杯、少量植物。",
+        "light": "侧前方暖光，低对比，背景保留轻微光影。",
+        "lens": "50mm，略低机位，主体偏左。",
+        "color": "暖灰偏米白，黑色边框保留层次。",
+        "quote": "Softness is control.",
+        "quoteCn": "柔和不是随意，是控制。",
+        "image": "assets/cases/f15-office-pm.svg",
+        "steps": [
+          {
+            "title": "找暖光",
+            "text": "选择有晚间氛围的墙面。"
+          },
+          {
+            "title": "控白色",
+            "text": "拍摄时避免白机发黄。"
+          },
+          {
+            "title": "保留白",
+            "text": "画面保留干净呼吸区。"
+          },
+          {
+            "title": "减反差",
+            "text": "不要做过重对比。"
+          }
+        ]
+      }
+    }
+  ]
+}

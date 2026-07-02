@@ -1,1 +1,181 @@
-<!doctype html><html lang='zh-CN'><head><meta charset='utf-8'><meta name='viewport' content='width=device-width,initial-scale=1'><title>每日审美点子库</title><style>:root{--bg:#f6f6f7;--card:#fff;--text:#1d1d1f;--muted:#6e6e73;--line:#e5e5ea;--brown:#2a1710;--shadow:0 16px 40px rgba(0,0,0,.07)}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI','PingFang SC','Microsoft YaHei',sans-serif}.wrap{max-width:1380px;margin:auto;padding:18px 16px 42px}.card{background:#fff;border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow)}.topbar{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:16px 22px;margin-bottom:16px}.brand{display:flex;gap:18px;align-items:center;flex-wrap:wrap}.brand h1{margin:0;font-size:20px}.brand p{margin:0;color:var(--muted);font-size:14px}.tabs,.controls,.chips{display:flex;gap:10px;flex-wrap:wrap;align-items:center}.tab,.ctrl,.chip{padding:10px 16px;border-radius:999px;border:1px solid var(--line);background:#f7f7f8;font-size:13px;color:#404046;cursor:pointer;user-select:none}.tab.active,.ctrl.active{background:var(--brown);color:#fff;border-color:var(--brown)}.hero{padding:22px}.small{font-size:12px;color:var(--muted);margin-bottom:10px}.hero h2{font-size:18px;margin:0 0 10px;color:var(--muted);font-weight:600}.hero h3{font-size:28px;margin:0 0 8px}.hero p{margin:0;color:var(--muted);line-height:1.8}.grid{display:grid;grid-template-columns:1.25fr .85fr;gap:14px;margin-top:16px}.caseImage{position:relative;overflow:hidden;border-radius:24px;background:#f2f2f4;border:1px solid var(--line);min-height:540px}.caseImage img{width:100%;height:100%;object-fit:cover;display:block;cursor:zoom-in}.zoomBtn{position:absolute;right:12px;top:12px;width:38px;height:38px;border:0;border-radius:50%;background:rgba(0,0,0,.65);color:#fff;font-size:18px;cursor:pointer}.infoCol{display:grid;gap:12px}.infoBox{padding:20px;border:1px solid var(--line);border-radius:24px;background:#fff}.infoBox h4{margin:0 0 12px;font-size:16px}.infoBox p{margin:0;color:#444;line-height:1.85;font-size:15px}.steps{margin-top:14px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{padding:18px;border:1px solid var(--line);border-radius:22px;background:#fff}.step strong{display:block;font-size:14px;margin-bottom:10px}.step p{margin:0;color:#555;line-height:1.7;font-size:14px}.principle{margin-top:14px;padding:20px 22px;display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:start}.principle b{font-size:14px}.principle p{margin:0;color:#333;line-height:1.9}.footerNav{display:flex;justify-content:center;gap:18px;align-items:center;color:#6c675f;margin-top:14px;font-size:14px}.dot{width:9px;height:9px;border-radius:50%;background:#c9c4bc;display:inline-block}.dot.active{background:#3f2917}.modal{position:fixed;inset:0;background:rgba(0,0,0,.76);display:none;align-items:center;justify-content:center;padding:24px;z-index:99}.modal.show{display:flex}.modal img{max-width:min(1400px,94vw);max-height:88vh;border-radius:18px;box-shadow:0 20px 60px rgba(0,0,0,.45)}.close{position:fixed;right:22px;top:18px;border:0;background:rgba(255,255,255,.12);color:#fff;border-radius:999px;padding:10px 14px;font-size:14px;cursor:pointer}@media(max-width:1100px){.topbar{display:block}.brand{margin-bottom:12px}.grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr 1fr}}@media(max-width:700px){.hero h3{font-size:24px}.steps{grid-template-columns:1fr}.principle{grid-template-columns:1fr}.caseImage{min-height:300px}}</style></head><body><div class='wrap'><div class='card topbar'><div class='brand'><h1>DR.COFFEE · 每日审美点子库</h1><p>每天 1 个审美方向，积累让作品更有质感</p></div><div class='tabs'><div class='tab active'>摄影</div><div class='tab'>镜头</div><div class='tab'>穿搭</div></div><div class='controls'><div class='ctrl active' id='date-today'>今天 07.01</div><div class='ctrl' id='date-yesterday'>昨天 06.30</div></div></div><div class='card hero'><div class='small' id='metaLine'></div><div style='display:flex;justify-content:space-between;gap:18px;align-items:flex-start;flex-wrap:wrap'><div><h2>DR.COFFEE · 今日相关案例</h2><h3 id='title'></h3><p id='subtitle'></p></div><div class='chips'><div class='chip'>真实场景图</div><div class='chip'>构图案例</div><div class='chip'>每日增长</div></div></div><div style='margin-top:14px' class='controls'><div class='ctrl active' id='slot-am'>晨间</div><div class='ctrl' id='slot-pm'>晚间</div></div><div class='grid'><div><div class='caseImage'><img id='case-img' src='' alt='案例图'><button class='zoomBtn' id='zoomBtn'>↗</button></div></div><div class='infoCol'><div class='infoBox'><h4>场景</h4><p id='scene'></p></div><div class='infoBox'><h4>灯光</h4><p id='light'></p></div><div class='infoBox'><h4>构图 / 焦段</h4><p id='lens'></p></div><div class='infoBox'><h4>调色</h4><p id='color'></p></div></div></div><div class='steps' id='steps'></div></div><div class='card principle'><b>今日原则</b><p id='principle'></p></div><div class='footerNav'><span>昨天 06.30</span><span class='dot'></span><span class='dot active'></span><span>今天 07.01</span></div></div><div class='modal' id='modal'><button class='close' id='closeModal'>关闭</button><img id='modalImg' src='' alt='放大图'></div><script>const IMG='assets/cases/f15-office-airy.svg?v=real';const DB={today:{am:{meta:'2026.07.01 · 今日案例 · 晨间',title:'F15 白色版｜办公室空气感案例',subtitle:'根据今天的“空气感”主题，把 F15 转译成一套真实可拍的办公室咖啡角场景。',image:IMG,scene:'办公室茶水间 / 窗边咖啡角。浅灰墙面、木色台面、白杯、杂志、小植物。',light:'左后方 45° 柔光，正面白板轻补。不要把机器正面打平，保留墙面的光影层次。',lens:'35mm 或 50mm，中景优先。机器放左 1/3，右侧保留干净留白。',color:'低饱和，白墙不发黄，木色不过橙，机器白色保持干净。',steps:['先选茶水间或窗边咖啡角','再找侧后方自然光或柔光','机器放左 1/3，屏幕微微转头','道具只留白杯、杂志、小植物'],principle:'先感受空气和光，再去看主体。产品不是孤立的，它要自然存在于一个可信的商业空间里。'},pm:{meta:'2026.07.01 · 今日案例 · 晚间',title:'F15 白色版｜余晖轻商务案例',subtitle:'晚间内容切到“柔和余晖 + 安静办公”的方向，强调光线温度和留白。',image:IMG,scene:'临窗办公区 / 安静会议角。木台面、咖啡杯、少量植物，背景只保留轻微办公氛围。',light:'侧前方斜射暖光，形成墙面投影。可用百叶窗或遮幅制造更有节奏的光影。',lens:'50mm 更稳，机位略低于屏幕中心。主体偏左，右上和右侧作为呼吸区。',color:'暖灰偏米白，保留日落余晖感，但不要把白机拍黄。黑色侧板和屏幕边框要有层次。',steps:['先找有斜向光影的墙面','木台面保持干净，只留一杯一刊','让光打在墙上，不要只打机器','后期压一点高光，保住白色质感'],principle:'晚间不一定更暗，而是更柔和。让光线成为情绪，不要让道具抢戏。'}},yesterday:{am:{meta:'2026.06.30 · 昨日案例 · 晨间',title:'F15 白色版｜静态留白案例',subtitle:'昨天的重点是“留白和稳定”，把产品放进更克制、更安静的构图里。',image:IMG,scene:'简洁台面 / 靠窗一角。背景尽量干净，桌面只留必要的杯子和刊物。',light:'柔和自然光，避免复杂反光。墙面阴影保留一点变化，画面才不会扁。',lens:'50mm 直给，正面中景。机器偏左，右侧大留白。',color:'中性暖灰，层次轻一点，整体干净克制。',steps:['先清理背景','确认右侧留白够不够','只保留一杯一刊一株植物','后期优先统一色温'],principle:'留白不是空，是为了让主体更稳。'},pm:{meta:'2026.06.30 · 昨日案例 · 晚间',title:'F15 白色版｜简洁收束案例',subtitle:'把构图进一步收束，让台面、产品、光影关系更干净。',image:IMG,scene:'小型咖啡角 / 样板区台面。背景不要信息过多。',light:'晚间柔光或低对比灯光，避免高反差死黑。',lens:'50mm，画面更稳。构图尽量居中偏左。',color:'控制反差，不要过脏过灰。',steps:['先稳住构图','机器屏幕亮度适当压低','杯子不要贴太近主体','用一张图只讲一个点'],principle:'信息越少，画面越高级。'}}};let currentDate='today',currentSlot='am';const $=id=>document.getElementById(id);function render(){const d=DB[currentDate][currentSlot];$('metaLine').textContent=d.meta;$('title').textContent=d.title;$('subtitle').textContent=d.subtitle;$('case-img').src=d.image;$('modalImg').src=d.image;$('scene').textContent=d.scene;$('light').textContent=d.light;$('lens').textContent=d.lens;$('color').textContent=d.color;$('principle').textContent=d.principle;$('steps').innerHTML=d.steps.map((s,i)=>`<div class='step'><strong>STEP 0${i+1}</strong><p>${s}</p></div>`).join('');$('slot-am').classList.toggle('active',currentSlot==='am');$('slot-pm').classList.toggle('active',currentSlot==='pm');$('date-today').classList.toggle('active',currentDate==='today');$('date-yesterday').classList.toggle('active',currentDate==='yesterday')}$('slot-am').onclick=()=>{currentSlot='am';render()};$('slot-pm').onclick=()=>{currentSlot='pm';render()};$('date-today').onclick=()=>{currentDate='today';render()};$('date-yesterday').onclick=()=>{currentDate='yesterday';render()};function openModal(){$('modal').classList.add('show')}function closeModal(){$('modal').classList.remove('show')}$('case-img').onclick=openModal;$('zoomBtn').onclick=openModal;$('closeModal').onclick=closeModal;$('modal').onclick=e=>{if(e.target.id==='modal')closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});render();</script></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Aesthetic OS · DR.COFFEE</title>
+  <style>
+    :root{
+      --bg:#f5f2ec;--card:#fffdf8;--text:#17130f;--muted:#77706a;
+      --line:rgba(32,24,18,.12);--dark:#1d120d;--soft:#ede4d8;
+      --shadow:0 24px 70px rgba(37,24,14,.10)
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+    .wrap{max-width:1320px;margin:auto;padding:22px 16px 56px}
+    .top{position:sticky;top:0;z-index:10;backdrop-filter:blur(18px);background:rgba(245,242,236,.76);border-bottom:1px solid var(--line)}
+    .topIn{max-width:1320px;margin:auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .logo{font-weight:700;letter-spacing:.02em}.logo span{color:var(--muted);font-weight:500}
+    .nav{display:flex;gap:8px;flex-wrap:wrap}.nav button,.chip{border:1px solid var(--line);background:rgba(255,255,255,.66);border-radius:999px;padding:9px 14px;color:#473d35;cursor:pointer}
+    .nav button.active,.chip.dark{background:var(--dark);color:#fff;border-color:var(--dark)}
+    .hero{min-height:78vh;display:grid;align-items:end;padding:40px 0 22px}
+    .heroCard{border-radius:38px;overflow:hidden;position:relative;min-height:620px;background:#ddd;box-shadow:var(--shadow)}
+    .heroCard img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
+    .heroOverlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.58));display:flex;align-items:flex-end}
+    .heroText{padding:42px;color:#fff;max-width:760px}.heroText small{display:block;margin-bottom:14px;opacity:.82}.heroText h1{font-size:64px;line-height:1.02;margin:0 0 14px;letter-spacing:-.04em}.heroText p{margin:0;line-height:1.8;color:rgba(255,255,255,.86);font-size:17px}
+    .section{margin-top:18px;padding:28px;border:1px solid var(--line);border-radius:32px;background:var(--card);box-shadow:var(--shadow)}
+    .sectionHead{display:flex;justify-content:space-between;gap:14px;align-items:end;margin-bottom:20px}.sectionHead h2{font-size:30px;letter-spacing:-.03em;margin:0}.sectionHead p{margin:8px 0 0;color:var(--muted);line-height:1.7}
+    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px}.card b{display:block;margin-bottom:12px}.card p{margin:0;color:#5b5149;line-height:1.75}
+    .observe{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.observeImg{min-height:500px;border-radius:28px;overflow:hidden;background:#eee;border:1px solid var(--line);position:relative}.observeImg img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+    .breakdown{display:grid;gap:12px}.info{padding:20px;border-radius:22px;border:1px solid var(--line);background:#fff}.info h3{font-size:15px;margin:0 0 10px;color:#3b312a}.info p{margin:0;color:#5d544c;line-height:1.75}
+    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{min-height:180px;padding:22px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,#fff,#f6efe5)}.step small{color:var(--muted)}.step h3{margin:18px 0 12px;font-size:23px}.step p{margin:0;color:#5d544c;line-height:1.7}
+    .caseGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:16px}.productBox{border-radius:28px;padding:28px;background:var(--dark);color:#fff}.productBox h3{font-size:42px;margin:0 0 16px}.productBox p{color:rgba(255,255,255,.78);line-height:1.8}.why{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .quote{font-size:44px;line-height:1.15;letter-spacing:-.04em;margin:0}.quoteCn{font-size:22px;color:var(--muted);margin-top:16px}
+    .library{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.day{padding:20px;border:1px solid var(--line);border-radius:24px;background:#fff;cursor:pointer}.day small{color:var(--muted)}.day h3{margin:10px 0 8px}.day p{margin:0;color:#5d544c;line-height:1.65}
+    .progress{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat{padding:24px;border-radius:24px;background:#fff;border:1px solid var(--line)}.stat b{font-size:34px}.stat span{display:block;color:var(--muted);margin-top:8px}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;padding:24px;z-index:99}.modal.show{display:flex}.modal img{max-width:min(1400px,94vw);max-height:88vh;border-radius:20px}.close{position:fixed;right:22px;top:18px;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:999px;padding:10px 14px;cursor:pointer}
+    @media(max-width:900px){.heroText h1{font-size:42px}.observe,.caseGrid{grid-template-columns:1fr}.grid3,.steps,.why,.library,.progress{grid-template-columns:1fr 1fr}.heroCard{min-height:520px}.observeImg{min-height:360px}}
+    @media(max-width:620px){.grid3,.steps,.why,.library,.progress{grid-template-columns:1fr}.section{padding:20px}.heroText{padding:26px}.heroText h1{font-size:34px}.topIn{display:block}.nav{margin-top:10px}.heroCard{min-height:470px}}
+  </style>
+</head>
+<body>
+  <header class="top">
+    <div class="topIn">
+      <div class="logo">Aesthetic OS <span>· DR.COFFEE Daily</span></div>
+      <div class="nav">
+        <button class="active" data-slot="pm">晚间</button>
+        <button data-slot="am">晨间</button>
+        <button onclick="document.querySelector('#library').scrollIntoView()">历史</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="hero">
+      <div class="heroCard">
+        <img id="heroImg" src="" alt="今日审美案例图">
+        <div class="heroOverlay">
+          <div class="heroText">
+            <small id="heroMeta">2026.07.02 · Good Evening</small>
+            <h1 id="heroTitle">Warm Office Lighting</h1>
+            <p id="heroIntro">光不是照亮产品，而是塑造空间。</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="training">
+      <div class="sectionHead">
+        <div><h2>Today</h2><p id="todayDesc">今天只训练一个方向。</p></div>
+        <span class="chip dark">10 min Training</span>
+      </div>
+      <div class="grid3">
+        <div class="card"><b>看光</b><p>先看光从哪里来，再决定产品放在哪里。光线决定空间质感。</p></div>
+        <div class="card"><b>看空间</b><p>只保留能说明场景的元素。背景越克制，产品越有商业感。</p></div>
+        <div class="card"><b>看比例</b><p>产品不需要填满画面。留白是高级感的一部分。</p></div>
+      </div>
+    </section>
+
+    <section class="section" id="observe">
+      <div class="sectionHead">
+        <div><h2>Observe</h2><p>先观察，不急着看答案。训练第一眼判断。</p></div>
+      </div>
+      <div class="observe">
+        <div class="observeImg"><img id="caseImg" src="" alt="Dr.Coffee 今日案例图"></div>
+        <div class="breakdown">
+          <div class="info"><h3>第一眼应该看什么？</h3><p id="observeAnswer">先看墙面光影，再看机器轮廓，最后看杯子和台面。</p></div>
+          <div class="info"><h3>场景</h3><p id="scene"></p></div>
+          <div class="info"><h3>灯光</h3><p id="light"></p></div>
+          <div class="info"><h3>构图 / 焦段</h3><p id="lens"></p></div>
+          <div class="info"><h3>调色</h3><p id="color"></p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="build">
+      <div class="sectionHead"><div><h2>Build</h2><p>带到现场可以直接照着执行。</p></div></div>
+      <div class="steps" id="steps"></div>
+    </section>
+
+    <section class="section" id="drcoffee">
+      <div class="sectionHead"><div><h2>Dr.Coffee Case</h2><p>把每日审美主题转译为咖啡机产品摄影。</p></div></div>
+      <div class="caseGrid">
+        <div class="productBox"><small>Today's Product</small><h3 id="product">F15</h3><p id="productReason">白色机身适合暖灰办公室环境，但需要控制色温，避免白色发黄。</p></div>
+        <div class="why">
+          <div class="info"><h3>为什么放左侧？</h3><p>右侧留白能让文字、光影和空间呼吸，画面更像商业广告。</p></div>
+          <div class="info"><h3>为什么不用复杂道具？</h3><p>道具越多，越像生活记录；道具越少，越像产品表达。</p></div>
+          <div class="info"><h3>为什么不用 85mm？</h3><p>85mm 会压缩空间，办公室场景会变弱。50mm 更容易保留环境关系。</p></div>
+          <div class="info"><h3>为什么要压高光？</h3><p>白色产品最怕死白。保住高光细节，质感才成立。</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="inspiration">
+      <div class="sectionHead"><div><h2>Inspiration</h2><p>每日一句原则。</p></div></div>
+      <p class="quote" id="quote">Don't light the object. Light the space.</p>
+      <div class="quoteCn" id="quoteCn">不要只照亮物体，要照亮空间。</div>
+    </section>
+
+    <section class="section" id="library">
+      <div class="sectionHead"><div><h2>Library</h2><p>主入口只显示最近两天，旧内容进入历史区域。</p></div></div>
+      <div class="library" id="libraryList"></div>
+    </section>
+
+    <section class="section" id="progress">
+      <div class="sectionHead"><div><h2>Progress</h2><p>先做静态记录，后续可升级为真实打卡。</p></div></div>
+      <div class="progress">
+        <div class="stat"><b id="days">2</b><span>Days</span></div>
+        <div class="stat"><b id="cases">4</b><span>Cases</span></div>
+        <div class="stat"><b id="principles">4</b><span>Principles</span></div>
+        <div class="stat"><b id="stepsCount">16</b><span>Steps</span></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal"><button class="close" id="closeModal">关闭</button><img id="modalImg" src="" alt="放大图"></div>
+
+  <script>
+    let DB, currentDay, currentSlot='pm';
+    const $=id=>document.getElementById(id);
+    async function init(){
+      const res=await fetch('data/cases.json?v=20260702');
+      DB=await res.json();
+      currentDay=DB.days[0].date;
+      render();
+      renderLibrary();
+      renderProgress();
+    }
+    function activeCase(){
+      const day=DB.days.find(d=>d.date===currentDay);
+      return {day, item:day[currentSlot]};
+    }
+    function render(){
+      const {day,item}=activeCase();
+      $('heroImg').src=item.image;$('caseImg').src=item.image;$('modalImg').src=item.image;
+      $('heroMeta').textContent=day.date.replaceAll('-','.')+' · '+(currentSlot==='pm'?'Good Evening':'Good Morning');
+      $('heroTitle').textContent=item.themeEn;
+      $('heroIntro').textContent=item.principle;
+      $('todayDesc').textContent=item.todayDesc;
+      $('observeAnswer').textContent=item.observe;
+      $('scene').textContent=item.scene;$('light').textContent=item.light;$('lens').textContent=item.lens;$('color').textContent=item.color;
+      $('product').textContent=item.product;$('productReason').textContent=item.productReason;
+      $('quote').textContent=item.quote;$('quoteCn').textContent=item.quoteCn;
+      $('steps').innerHTML=item.steps.map((s,i)=>`<div class="step"><small>STEP 0${i+1}</small><h3>${s.title}</h3><p>${s.text}</p></div>`).join('');
+      document.querySelectorAll('[data-slot]').forEach(b=>b.classList.toggle('active',b.dataset.slot===currentSlot));
+    }
+    function renderLibrary(){
+      $('libraryList').innerHTML=DB.days.slice(0,2).map(d=>`<div class="day" data-date="${d.date}"><small>${d.date}</small><h3>${d.pm.themeCn}</h3><p>晨间：${d.am.themeCn}<br>晚间：${d.pm.themeCn}</p></div>`).join('');
+      document.querySelectorAll('.day').forEach(el=>el.onclick=()=>{currentDay=el.dataset.date;currentSlot='pm';render();window.scrollTo({top:0,behavior:'smooth'});});
+    }
+    function renderProgress(){
+      const days=DB.days.length; $('days').textContent=days; $('cases').textContent=days*2; $('principles').textContent=days*2; $('stepsCount').textContent=days*8;
+    }
+    document.querySelectorAll('[data-slot]').forEach(b=>b.onclick=()=>{currentSlot=b.dataset.slot;render();});
+    function openModal(){ $('modal').classList.add('show'); }
+    function closeModal(){ $('modal').classList.remove('show'); }
+    $('caseImg').onclick=openModal;$('heroImg').onclick=openModal;$('closeModal').onclick=closeModal;$('modal').onclick=e=>{if(e.target.id==='modal')closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
+    init().catch(err=>{document.body.innerHTML='<main class="wrap"><section class="section"><h2>数据读取失败</h2><p>请确认 data/cases.json 已上传。</p></section></main>';console.error(err);});
+  </script>
+</body>
+</html>
