@@ -3,179 +3,377 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Aesthetic OS · DR.COFFEE</title>
+  <title>Aesthetic OS · DR.COFFEE Daily</title>
   <style>
     :root{
-      --bg:#f5f2ec;--card:#fffdf8;--text:#17130f;--muted:#77706a;
-      --line:rgba(32,24,18,.12);--dark:#1d120d;--soft:#ede4d8;
-      --shadow:0 24px 70px rgba(37,24,14,.10)
+      --bg:#f4f5f7;--panel:#ffffff;--panel2:#fbfbfc;--text:#111317;--muted:#7c818b;
+      --line:#e8eaee;--dark:#111319;--soft:#f7f8fa;--shadow:0 14px 40px rgba(15,21,31,.06);
+      --radius:28px;--radius2:22px;
     }
     *{box-sizing:border-box}
     html{scroll-behavior:smooth}
-    body{margin:0;background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
-    .wrap{max-width:1320px;margin:auto;padding:22px 16px 56px}
-    .top{position:sticky;top:0;z-index:10;backdrop-filter:blur(18px);background:rgba(245,242,236,.76);border-bottom:1px solid var(--line)}
-    .topIn{max-width:1320px;margin:auto;padding:14px 16px;display:flex;align-items:center;justify-content:space-between;gap:16px}
-    .logo{font-weight:700;letter-spacing:.02em}.logo span{color:var(--muted);font-weight:500}
-    .nav{display:flex;gap:8px;flex-wrap:wrap}.nav button,.chip{border:1px solid var(--line);background:rgba(255,255,255,.66);border-radius:999px;padding:9px 14px;color:#473d35;cursor:pointer}
-    .nav button.active,.chip.dark{background:var(--dark);color:#fff;border-color:var(--dark)}
-    .hero{min-height:78vh;display:grid;align-items:end;padding:40px 0 22px}
-    .heroCard{border-radius:38px;overflow:hidden;position:relative;min-height:620px;background:#ddd;box-shadow:var(--shadow)}
-    .heroCard img{width:100%;height:100%;object-fit:cover;position:absolute;inset:0}
-    .heroOverlay{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.08),rgba(0,0,0,.58));display:flex;align-items:flex-end}
-    .heroText{padding:42px;color:#fff;max-width:760px}.heroText small{display:block;margin-bottom:14px;opacity:.82}.heroText h1{font-size:64px;line-height:1.02;margin:0 0 14px;letter-spacing:-.04em}.heroText p{margin:0;line-height:1.8;color:rgba(255,255,255,.86);font-size:17px}
-    .section{margin-top:18px;padding:28px;border:1px solid var(--line);border-radius:32px;background:var(--card);box-shadow:var(--shadow)}
-    .sectionHead{display:flex;justify-content:space-between;gap:14px;align-items:end;margin-bottom:20px}.sectionHead h2{font-size:30px;letter-spacing:-.03em;margin:0}.sectionHead p{margin:8px 0 0;color:var(--muted);line-height:1.7}
-    .grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px}.card b{display:block;margin-bottom:12px}.card p{margin:0;color:#5b5149;line-height:1.75}
-    .observe{display:grid;grid-template-columns:1.1fr .9fr;gap:16px}.observeImg{min-height:500px;border-radius:28px;overflow:hidden;background:#eee;border:1px solid var(--line);position:relative}.observeImg img{width:100%;height:100%;object-fit:cover;cursor:zoom-in}
-    .breakdown{display:grid;gap:12px}.info{padding:20px;border-radius:22px;border:1px solid var(--line);background:#fff}.info h3{font-size:15px;margin:0 0 10px;color:#3b312a}.info p{margin:0;color:#5d544c;line-height:1.75}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.step{min-height:180px;padding:22px;border-radius:24px;border:1px solid var(--line);background:linear-gradient(180deg,#fff,#f6efe5)}.step small{color:var(--muted)}.step h3{margin:18px 0 12px;font-size:23px}.step p{margin:0;color:#5d544c;line-height:1.7}
-    .caseGrid{display:grid;grid-template-columns:.82fr 1.18fr;gap:16px}.productBox{border-radius:28px;padding:28px;background:var(--dark);color:#fff}.productBox h3{font-size:42px;margin:0 0 16px}.productBox p{color:rgba(255,255,255,.78);line-height:1.8}.why{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
-    .quote{font-size:44px;line-height:1.15;letter-spacing:-.04em;margin:0}.quoteCn{font-size:22px;color:var(--muted);margin-top:16px}
-    .library{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}.day{padding:20px;border:1px solid var(--line);border-radius:24px;background:#fff;cursor:pointer}.day small{color:var(--muted)}.day h3{margin:10px 0 8px}.day p{margin:0;color:#5d544c;line-height:1.65}
-    .progress{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.stat{padding:24px;border-radius:24px;background:#fff;border:1px solid var(--line)}.stat b{font-size:34px}.stat span{display:block;color:var(--muted);margin-top:8px}
-    .modal{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;padding:24px;z-index:99}.modal.show{display:flex}.modal img{max-width:min(1400px,94vw);max-height:88vh;border-radius:20px}.close{position:fixed;right:22px;top:18px;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:999px;padding:10px 14px;cursor:pointer}
-    @media(max-width:900px){.heroText h1{font-size:42px}.observe,.caseGrid{grid-template-columns:1fr}.grid3,.steps,.why,.library,.progress{grid-template-columns:1fr 1fr}.heroCard{min-height:520px}.observeImg{min-height:360px}}
-    @media(max-width:620px){.grid3,.steps,.why,.library,.progress{grid-template-columns:1fr}.section{padding:20px}.heroText{padding:26px}.heroText h1{font-size:34px}.topIn{display:block}.nav{margin-top:10px}.heroCard{min-height:470px}}
+    body{margin:0;background:linear-gradient(180deg,#f8f9fb 0%,#f3f4f6 100%);color:var(--text);
+      font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif}
+    a{text-decoration:none;color:inherit}
+    .app{display:grid;grid-template-columns:248px minmax(0,1fr);min-height:100vh}
+    .sidebar{border-right:1px solid var(--line);padding:28px 22px 22px;background:rgba(255,255,255,.72);backdrop-filter:blur(16px);position:sticky;top:0;height:100vh}
+    .brand{margin-bottom:34px}
+    .brand h1{font-size:36px;line-height:1;margin:0 0 12px;letter-spacing:-.04em}
+    .brand p{margin:0;color:var(--muted);font-size:13px;line-height:1.7}
+    .sideGroup{display:grid;gap:8px;margin-top:10px}
+    .sideLink{display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:16px;color:#49505b;font-size:15px;border:1px solid transparent}
+    .sideLink:hover{background:#fff;border-color:var(--line)}
+    .sideLink.active{background:#fff;border-color:var(--line);box-shadow:var(--shadow);color:#111}
+    .icon{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;background:#f1f3f5;color:#555;font-size:13px}
+    .sideFoot{position:absolute;left:22px;right:22px;bottom:20px;padding-top:18px;border-top:1px solid var(--line)}
+    .miniStats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+    .miniCard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:12px 14px}
+    .miniCard b{display:block;font-size:18px}
+    .miniCard span{display:block;margin-top:6px;color:var(--muted);font-size:12px}
+    .main{padding:24px 28px 40px}
+    .topbar{display:flex;justify-content:space-between;align-items:center;gap:20px;margin-bottom:18px}
+    .hello small{display:block;color:var(--muted);font-size:13px;margin-bottom:10px}
+    .hello h2{margin:0;font-size:38px;letter-spacing:-.04em}
+    .toggles{display:flex;gap:10px;flex-wrap:wrap}
+    .btn{border:1px solid var(--line);background:#fff;border-radius:999px;padding:11px 16px;cursor:pointer;color:#565d68;box-shadow:var(--shadow)}
+    .btn.active{background:var(--dark);color:#fff;border-color:var(--dark)}
+    .hero{position:relative;min-height:470px;border-radius:32px;overflow:hidden;border:1px solid var(--line);box-shadow:var(--shadow);background:#ddd}
+    .hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;cursor:zoom-in}
+    .hero:after{content:'';position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.54) 0%,rgba(0,0,0,.18) 42%,rgba(0,0,0,.04) 100%)}
+    .heroText{position:absolute;z-index:1;left:42px;right:42px;bottom:38px;display:flex;justify-content:space-between;gap:24px;align-items:end}
+    .focusTag{display:inline-block;padding:10px 14px;border-radius:999px;background:rgba(17,19,25,.58);color:#fff;font-size:12px;margin-bottom:18px;backdrop-filter:blur(8px)}
+    .heroText h3{margin:0 0 12px;color:#fff;font-size:58px;letter-spacing:-.05em;line-height:1}
+    .heroText h4{margin:0 0 14px;color:rgba(255,255,255,.86);font-size:22px;font-weight:500}
+    .heroText p{margin:0;color:rgba(255,255,255,.78);line-height:1.75;max-width:520px}
+    .heroMeta{color:rgba(255,255,255,.86);font-size:24px;white-space:nowrap}
+    .section{background:var(--panel);border:1px solid var(--line);border-radius:30px;box-shadow:var(--shadow);padding:24px;margin-top:16px}
+    .sectionHead{display:flex;justify-content:space-between;align-items:end;gap:16px;margin-bottom:18px}
+    .sectionHead h3{margin:0;font-size:28px;letter-spacing:-.03em}
+    .sectionHead small{display:block;color:var(--muted);font-size:12px;letter-spacing:.06em;margin-bottom:6px;text-transform:uppercase}
+    .sectionHead p{margin:8px 0 0;color:var(--muted);font-size:14px}
+    .pill{padding:10px 14px;border-radius:999px;border:1px solid var(--line);background:var(--soft);color:#525964;font-size:13px}
+    .trainGrid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+    .trainCard{padding:24px;border:1px solid var(--line);border-radius:24px;background:#fff}
+    .trainCard b{display:block;font-size:56px;line-height:1;color:#d1d5db;margin-bottom:14px}
+    .trainCard h4{margin:0 0 8px;font-size:18px}
+    .trainCard p{margin:0;color:#6a717c;line-height:1.75}
+    .recRow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .recCard,.selectCard{background:#fff;border:1px solid var(--line);border-radius:22px;overflow:hidden}
+    .thumb{aspect-ratio:1.3/1;background:#eef1f4}
+    .thumb img{display:block;width:100%;height:100%;object-fit:cover}
+    .recBody{padding:14px}
+    .badge{display:inline-block;margin-bottom:10px;font-size:11px;padding:6px 10px;border-radius:999px;background:#f3f5f7;color:#66707c}
+    .recBody h4{margin:0 0 8px;font-size:16px}
+    .recBody p{margin:0;color:#717783;font-size:13px;line-height:1.7}
+    .grid2{display:grid;grid-template-columns:1.12fr .88fr;gap:16px}
+    .featureCard{display:grid;grid-template-columns:1.05fr .95fr;gap:16px;align-items:stretch}
+    .featureVisual,.caseVisual{border-radius:24px;overflow:hidden;border:1px solid var(--line);background:#eef1f4}
+    .featureVisual img,.caseVisual img{width:100%;height:100%;display:block;object-fit:cover}
+    .featureInfo{padding:6px 0}
+    .featureInfo h4{font-size:30px;letter-spacing:-.04em;margin:0 0 12px}
+    .featureInfo p{margin:0 0 10px;color:#67707a;line-height:1.8}
+    .featureInfo .by{font-size:14px;color:#88909c}
+    .linkBtn{display:inline-flex;align-items:center;gap:8px;margin-top:10px;padding:10px 14px;border:1px solid var(--line);border-radius:999px;background:#fff;font-size:13px}
+    .quote{position:relative;overflow:hidden}
+    .quote:after{content:'';position:absolute;right:-60px;bottom:-85px;width:440px;height:220px;border-radius:50%;
+      background:radial-gradient(circle at center,rgba(230,234,238,.95) 0%,rgba(244,245,247,0) 70%)}
+    .quote blockquote{margin:0;position:relative;z-index:1}
+    .quoteMark{font-size:88px;color:#dfe3e8;line-height:1;margin-bottom:12px}
+    .quoteText{font-size:34px;letter-spacing:-.04em;line-height:1.18;margin-bottom:10px}
+    .quoteCn{color:#6f7782;font-size:18px}
+    .selectionRow{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+    .selectCard img{width:100%;height:118px;object-fit:cover;display:block}
+    .selectCard p{padding:12px 14px;margin:0;color:#5e6672;font-size:13px}
+    .libraryGrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+    .libraryItem{padding:18px;border:1px solid var(--line);border-radius:20px;background:#fff;cursor:pointer}
+    .libraryItem small{display:block;color:var(--muted);margin-bottom:10px}
+    .libraryItem h4{margin:0 0 8px;font-size:20px}
+    .libraryItem p{margin:0;color:#6f7681;line-height:1.7}
+    .modal{position:fixed;inset:0;background:rgba(0,0,0,.78);display:none;align-items:center;justify-content:center;padding:24px;z-index:99}
+    .modal.show{display:flex}
+    .modal img{max-width:min(1500px,94vw);max-height:88vh;border-radius:18px;box-shadow:0 24px 70px rgba(0,0,0,.35)}
+    .close{position:fixed;right:22px;top:20px;border:0;background:rgba(255,255,255,.14);color:#fff;border-radius:999px;padding:10px 14px;cursor:pointer}
+    @media(max-width:1350px){.recRow,.selectionRow{grid-template-columns:repeat(3,1fr)}}
+    @media(max-width:1100px){
+      .app{grid-template-columns:1fr}
+      .sidebar{position:relative;height:auto;border-right:0;border-bottom:1px solid var(--line)}
+      .sideFoot{position:static}
+      .grid2,.featureCard{grid-template-columns:1fr}
+      .trainGrid{grid-template-columns:1fr 1fr}
+      .recRow,.selectionRow{grid-template-columns:repeat(2,1fr)}
+      .libraryGrid{grid-template-columns:1fr}
+    }
+    @media(max-width:760px){
+      .main{padding:18px}
+      .hero{min-height:420px}
+      .heroText{left:22px;right:22px;bottom:24px;display:block}
+      .heroText h3{font-size:38px}
+      .heroMeta{margin-top:18px;font-size:18px}
+      .hello h2{font-size:28px}
+      .trainGrid,.recRow,.selectionRow{grid-template-columns:1fr}
+      .featureCard{gap:12px}
+    }
   </style>
 </head>
 <body>
-  <header class="top">
-    <div class="topIn">
-      <div class="logo">Aesthetic OS <span>· DR.COFFEE Daily</span></div>
-      <div class="nav">
-        <button class="active" data-slot="pm">晚间</button>
-        <button data-slot="am">晨间</button>
-        <button onclick="document.querySelector('#library').scrollIntoView()">历史</button>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <h1>Aesthetic OS</h1>
+      <p>DR.COFFEE Daily<br>审美训练 + 每日推荐 + 产品案例</p>
+    </div>
+    <div class="sideGroup">
+      <a class="sideLink active" href="#today"><span class="icon">⌂</span><span>今日</span></a>
+      <a class="sideLink" href="#recommend"><span class="icon">✦</span><span>推荐</span></a>
+      <a class="sideLink" href="#inspiration"><span class="icon">◌</span><span>灵感</span></a>
+      <a class="sideLink" href="#case"><span class="icon">▣</span><span>案例库</span></a>
+      <a class="sideLink" href="#quote"><span class="icon">❝</span><span>每日一句</span></a>
+      <a class="sideLink" href="#selection"><span class="icon">☰</span><span>精选</span></a>
+    </div>
+    <div class="sideFoot">
+      <div class="miniStats">
+        <div class="miniCard"><b id="daysLearned">2</b><span>已更新天数</span></div>
+        <div class="miniCard"><b id="recCount">5</b><span>今日推荐</span></div>
+      </div>
+      <p style="margin:0;color:var(--muted);font-size:12px;line-height:1.8">
+        提示：以后每天只需要更新一份数据文件和对应图片，我就可以继续帮你补内容。
+      </p>
+    </div>
+  </aside>
+
+  <main class="main">
+    <div class="topbar">
+      <div class="hello">
+        <small id="dateLine">2026 / 07 / 02 · 周四</small>
+        <h2 id="greeting">Good Evening, Zhou.</h2>
+      </div>
+      <div class="toggles">
+        <button class="btn active" data-slot="pm">晚间</button>
+        <button class="btn" data-slot="am">晨间</button>
+        <button class="btn" onclick="document.getElementById('library').scrollIntoView()">历史</button>
       </div>
     </div>
-  </header>
 
-  <main class="wrap">
-    <section class="hero">
-      <div class="heroCard">
-        <img id="heroImg" src="" alt="今日审美案例图">
-        <div class="heroOverlay">
-          <div class="heroText">
-            <small id="heroMeta">2026.07.02 · Good Evening</small>
-            <h1 id="heroTitle">Warm Office Lighting</h1>
-            <p id="heroIntro">光不是照亮产品，而是塑造空间。</p>
-          </div>
+    <section class="hero" id="today">
+      <img id="heroImg" src="" alt="Today's focus image">
+      <div class="heroText">
+        <div>
+          <div class="focusTag">TODAY'S FOCUS</div>
+          <h3 id="heroTitleCn">温暖的办公空间</h3>
+          <h4 id="heroTitleEn">Warm Office Lighting</h4>
+          <p id="heroPrinciple">光不是照亮产品，而是塑造空间。</p>
         </div>
+        <div class="heroMeta" id="heroProduct">Dr.Coffee F15</div>
       </div>
     </section>
 
     <section class="section" id="training">
       <div class="sectionHead">
-        <div><h2>Today</h2><p id="todayDesc">今天只训练一个方向。</p></div>
-        <span class="chip dark">10 min Training</span>
+        <div>
+          <small>Today</small>
+          <h3>今日训练</h3>
+          <p id="trainingDesc">今天只训练一个方向：干净、金属感、简洁场景。</p>
+        </div>
+        <div class="pill">10 min</div>
       </div>
-      <div class="grid3">
-        <div class="card"><b>看光</b><p>先看光从哪里来，再决定产品放在哪里。光线决定空间质感。</p></div>
-        <div class="card"><b>看空间</b><p>只保留能说明场景的元素。背景越克制，产品越有商业感。</p></div>
-        <div class="card"><b>看比例</b><p>产品不需要填满画面。留白是高级感的一部分。</p></div>
-      </div>
+      <div class="trainGrid" id="trainGrid"></div>
     </section>
 
-    <section class="section" id="observe">
+    <section class="section" id="recommend">
       <div class="sectionHead">
-        <div><h2>Observe</h2><p>先观察，不急着看答案。训练第一眼判断。</p></div>
+        <div>
+          <small>Daily Recommendation</small>
+          <h3>每日推荐</h3>
+          <p>保留你每天提升审美的内容，不只看机器，也看光影、构图、生活、电影与材质。</p>
+        </div>
+        <div class="pill" id="recommendUpdate">07.02 · 18:30 更新</div>
       </div>
-      <div class="observe">
-        <div class="observeImg"><img id="caseImg" src="" alt="Dr.Coffee 今日案例图"></div>
-        <div class="breakdown">
-          <div class="info"><h3>第一眼应该看什么？</h3><p id="observeAnswer">先看墙面光影，再看机器轮廓，最后看杯子和台面。</p></div>
-          <div class="info"><h3>场景</h3><p id="scene"></p></div>
-          <div class="info"><h3>灯光</h3><p id="light"></p></div>
-          <div class="info"><h3>构图 / 焦段</h3><p id="lens"></p></div>
-          <div class="info"><h3>调色</h3><p id="color"></p></div>
+      <div class="recRow" id="recommendRow"></div>
+    </section>
+
+    <section class="grid2" id="inspiration" style="margin-top:16px">
+      <section class="section" style="margin-top:0">
+        <div class="sectionHead">
+          <div>
+            <small>Daily Inspiration</small>
+            <h3>今日灵感</h3>
+          </div>
+        </div>
+        <div class="featureCard">
+          <div class="featureVisual"><img id="inspImg" src="" alt="Daily inspiration"></div>
+          <div class="featureInfo">
+            <h4 id="inspTitle">孤独之树</h4>
+            <p class="by" id="inspBy">摄影师：Julian Palacios</p>
+            <p id="inspText1">雾气、山峦、孤树。</p>
+            <p id="inspText2">它站在水中央，安静而稳定。最简单的画面，往往最有力量。</p>
+            <a class="linkBtn" href="javascript:void(0)">查看详情 →</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" style="margin-top:0" id="case">
+        <div class="sectionHead">
+          <div>
+            <small>Today's Case</small>
+            <h3>Dr.Coffee 今日案例</h3>
+          </div>
+        </div>
+        <div class="featureCard" style="grid-template-columns:1fr">
+          <div class="caseVisual" style="aspect-ratio:1.9/1"><img id="caseImg" src="" alt="Dr.Coffee case"></div>
+          <div class="featureInfo">
+            <h4 id="caseTitle">F15 白色版｜办公室空气感案例</h4>
+            <p id="caseText">木质桌面、百叶光影、银白机感，传递通透而克制的办公氛围。</p>
+            <a class="linkBtn" href="javascript:void(0)">查看详情 →</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section class="section quote" id="quote">
+      <div class="sectionHead">
+        <div>
+          <small>Daily Quote</small>
+          <h3>每日一句</h3>
         </div>
       </div>
+      <blockquote>
+        <div class="quoteMark">“</div>
+        <div class="quoteText" id="quoteText">Don't chase light. Understand light.</div>
+        <div class="quoteCn" id="quoteCn">不要追逐光，先理解光。</div>
+      </blockquote>
     </section>
 
-    <section class="section" id="build">
-      <div class="sectionHead"><div><h2>Build</h2><p>带到现场可以直接照着执行。</p></div></div>
-      <div class="steps" id="steps"></div>
-    </section>
-
-    <section class="section" id="drcoffee">
-      <div class="sectionHead"><div><h2>Dr.Coffee Case</h2><p>把每日审美主题转译为咖啡机产品摄影。</p></div></div>
-      <div class="caseGrid">
-        <div class="productBox"><small>Today's Product</small><h3 id="product">F15</h3><p id="productReason">白色机身适合暖灰办公室环境，但需要控制色温，避免白色发黄。</p></div>
-        <div class="why">
-          <div class="info"><h3>为什么放左侧？</h3><p>右侧留白能让文字、光影和空间呼吸，画面更像商业广告。</p></div>
-          <div class="info"><h3>为什么不用复杂道具？</h3><p>道具越多，越像生活记录；道具越少，越像产品表达。</p></div>
-          <div class="info"><h3>为什么不用 85mm？</h3><p>85mm 会压缩空间，办公室场景会变弱。50mm 更容易保留环境关系。</p></div>
-          <div class="info"><h3>为什么要压高光？</h3><p>白色产品最怕死白。保住高光细节，质感才成立。</p></div>
+    <section class="section" id="selection">
+      <div class="sectionHead">
+        <div>
+          <small>Curated Selection</small>
+          <h3>文艺与审美精选</h3>
+          <p>把你喜欢的审美推荐继续留在网站里，形成长期可回看的积累。</p>
         </div>
       </div>
-    </section>
-
-    <section class="section" id="inspiration">
-      <div class="sectionHead"><div><h2>Inspiration</h2><p>每日一句原则。</p></div></div>
-      <p class="quote" id="quote">Don't light the object. Light the space.</p>
-      <div class="quoteCn" id="quoteCn">不要只照亮物体，要照亮空间。</div>
+      <div class="selectionRow" id="selectionRow"></div>
     </section>
 
     <section class="section" id="library">
-      <div class="sectionHead"><div><h2>Library</h2><p>主入口只显示最近两天，旧内容进入历史区域。</p></div></div>
-      <div class="library" id="libraryList"></div>
-    </section>
-
-    <section class="section" id="progress">
-      <div class="sectionHead"><div><h2>Progress</h2><p>先做静态记录，后续可升级为真实打卡。</p></div></div>
-      <div class="progress">
-        <div class="stat"><b id="days">2</b><span>Days</span></div>
-        <div class="stat"><b id="cases">4</b><span>Cases</span></div>
-        <div class="stat"><b id="principles">4</b><span>Principles</span></div>
-        <div class="stat"><b id="stepsCount">16</b><span>Steps</span></div>
+      <div class="sectionHead">
+        <div>
+          <small>History</small>
+          <h3>历史案例</h3>
+          <p>主入口只展示最近两天，旧内容放在这里。</p>
+        </div>
       </div>
+      <div class="libraryGrid" id="libraryGrid"></div>
     </section>
   </main>
+</div>
 
-  <div class="modal" id="modal"><button class="close" id="closeModal">关闭</button><img id="modalImg" src="" alt="放大图"></div>
+<div class="modal" id="modal">
+  <button class="close" id="closeModal">关闭</button>
+  <img id="modalImg" src="" alt="放大图">
+</div>
 
-  <script>
-    let DB, currentDay, currentSlot='pm';
-    const $=id=>document.getElementById(id);
-    async function init(){
-      const res=await fetch('data/cases.json?v=20260702');
-      DB=await res.json();
-      currentDay=DB.days[0].date;
-      render();
-      renderLibrary();
-      renderProgress();
-    }
-    function activeCase(){
-      const day=DB.days.find(d=>d.date===currentDay);
-      return {day, item:day[currentSlot]};
-    }
-    function render(){
-      const {day,item}=activeCase();
-      $('heroImg').src=item.image;$('caseImg').src=item.image;$('modalImg').src=item.image;
-      $('heroMeta').textContent=day.date.replaceAll('-','.')+' · '+(currentSlot==='pm'?'Good Evening':'Good Morning');
-      $('heroTitle').textContent=item.themeEn;
-      $('heroIntro').textContent=item.principle;
-      $('todayDesc').textContent=item.todayDesc;
-      $('observeAnswer').textContent=item.observe;
-      $('scene').textContent=item.scene;$('light').textContent=item.light;$('lens').textContent=item.lens;$('color').textContent=item.color;
-      $('product').textContent=item.product;$('productReason').textContent=item.productReason;
-      $('quote').textContent=item.quote;$('quoteCn').textContent=item.quoteCn;
-      $('steps').innerHTML=item.steps.map((s,i)=>`<div class="step"><small>STEP 0${i+1}</small><h3>${s.title}</h3><p>${s.text}</p></div>`).join('');
-      document.querySelectorAll('[data-slot]').forEach(b=>b.classList.toggle('active',b.dataset.slot===currentSlot));
-    }
-    function renderLibrary(){
-      $('libraryList').innerHTML=DB.days.slice(0,2).map(d=>`<div class="day" data-date="${d.date}"><small>${d.date}</small><h3>${d.pm.themeCn}</h3><p>晨间：${d.am.themeCn}<br>晚间：${d.pm.themeCn}</p></div>`).join('');
-      document.querySelectorAll('.day').forEach(el=>el.onclick=()=>{currentDay=el.dataset.date;currentSlot='pm';render();window.scrollTo({top:0,behavior:'smooth'});});
-    }
-    function renderProgress(){
-      const days=DB.days.length; $('days').textContent=days; $('cases').textContent=days*2; $('principles').textContent=days*2; $('stepsCount').textContent=days*8;
-    }
-    document.querySelectorAll('[data-slot]').forEach(b=>b.onclick=()=>{currentSlot=b.dataset.slot;render();});
-    function openModal(){ $('modal').classList.add('show'); }
-    function closeModal(){ $('modal').classList.remove('show'); }
-    $('caseImg').onclick=openModal;$('heroImg').onclick=openModal;$('closeModal').onclick=closeModal;$('modal').onclick=e=>{if(e.target.id==='modal')closeModal()};document.addEventListener('keydown',e=>{if(e.key==='Escape')closeModal()});
-    init().catch(err=>{document.body.innerHTML='<main class="wrap"><section class="section"><h2>数据读取失败</h2><p>请确认 data/cases.json 已上传。</p></section></main>';console.error(err);});
-  </script>
+<script>
+let DB,currentSlot='pm',currentDay='';
+
+const $=id=>document.getElementById(id);
+
+async function init(){
+  const res=await fetch('data/content.json?v=20260702v2');
+  DB=await res.json();
+  currentDay=DB.days[0].date;
+  render();
+  renderLibrary();
+  updateMiniStats();
+}
+
+function getActiveDay(){
+  return DB.days.find(d=>d.date===currentDay) || DB.days[0];
+}
+function getActiveCase(){
+  return getActiveDay()[currentSlot];
+}
+function render(){
+  const day=getActiveDay();
+  const item=getActiveCase();
+  $('dateLine').textContent=day.metaDate;
+  $('greeting').textContent=currentSlot==='pm'?'Good Evening, Zhou.':'Good Morning, Zhou.';
+  $('heroImg').src=item.image;
+  $('caseImg').src=item.image;
+  $('modalImg').src=item.image;
+  $('heroTitleCn').textContent=item.themeCn;
+  $('heroTitleEn').textContent=item.themeEn;
+  $('heroPrinciple').textContent=item.principle;
+  $('heroProduct').textContent='Dr.Coffee ' + item.product;
+  $('trainingDesc').textContent=item.trainingDesc;
+  $('trainGrid').innerHTML=item.training.map((t,i)=>`
+    <div class="trainCard">
+      <b>${String(i+1).padStart(2,'0')}</b>
+      <h4>${t.title}</h4>
+      <p>${t.text}</p>
+    </div>`).join('');
+
+  $('recommendUpdate').textContent = DB.recommendation.update;
+  $('recommendRow').innerHTML = DB.recommendation.items.map(r=>`
+    <div class="recCard">
+      <div class="thumb"><img src="${r.image}" alt="${r.title}"></div>
+      <div class="recBody">
+        <span class="badge">${r.category}</span>
+        <h4>${r.title}</h4>
+        <p>${r.desc}</p>
+      </div>
+    </div>`).join('');
+
+  $('inspImg').src=DB.inspiration.image;
+  $('inspTitle').textContent=DB.inspiration.title;
+  $('inspBy').textContent='摄影师：' + DB.inspiration.author;
+  $('inspText1').textContent=DB.inspiration.text1;
+  $('inspText2').textContent=DB.inspiration.text2;
+
+  $('caseTitle').textContent=item.caseTitle;
+  $('caseText').textContent=item.caseText;
+  $('quoteText').textContent=DB.quote.en;
+  $('quoteCn').textContent=DB.quote.cn;
+
+  $('selectionRow').innerHTML = DB.selection.map(s=>`
+    <div class="selectCard">
+      <img src="${s.image}" alt="${s.title}">
+      <p><strong>${s.title}</strong><br>${s.desc}</p>
+    </div>`).join('');
+
+  document.querySelectorAll('[data-slot]').forEach(b=>b.classList.toggle('active',b.dataset.slot===currentSlot));
+}
+function renderLibrary(){
+  $('libraryGrid').innerHTML = DB.days.slice(0,2).map(d=>`
+    <div class="libraryItem" data-date="${d.date}">
+      <small>${d.date}</small>
+      <h4>${d.pm.themeCn}</h4>
+      <p>晨间：${d.am.themeCn}<br>晚间：${d.pm.themeCn}</p>
+    </div>`).join('');
+  document.querySelectorAll('.libraryItem').forEach(el=>el.onclick=()=>{
+    currentDay=el.dataset.date;
+    currentSlot='pm';
+    render();
+    window.scrollTo({top:0,behavior:'smooth'});
+  });
+}
+function updateMiniStats(){
+  $('daysLearned').textContent = DB.days.length;
+  $('recCount').textContent = DB.recommendation.items.length;
+}
+document.querySelectorAll('[data-slot]').forEach(b=>b.onclick=()=>{currentSlot=b.dataset.slot;render();});
+
+function openModal(){ $('modal').classList.add('show');}
+function closeModal(){ $('modal').classList.remove('show');}
+document.addEventListener('click',e=>{
+  if(e.target.id==='heroImg' || e.target.id==='caseImg'){openModal();}
+  if(e.target.id==='closeModal') closeModal();
+  if(e.target.id==='modal') closeModal();
+});
+document.addEventListener('keydown',e=>{if(e.key==='Escape') closeModal();});
+init().catch(err=>{
+  console.error(err);
+  document.body.innerHTML='<div style="padding:40px;font-family:sans-serif"><h2>网站数据加载失败</h2><p>请确认 data/content.json 以及 assets 文件夹已正确上传。</p></div>';
+});
+</script>
 </body>
 </html>

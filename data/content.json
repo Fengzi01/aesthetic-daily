@@ -1,0 +1,197 @@
+{
+  "recommendation": {
+    "update": "07.02 · 18:30 更新",
+    "items": [
+      {
+        "category": "光影之美",
+        "title": "窗影与留白",
+        "desc": "光影的方向决定空间的情绪，留白让画面更克制。",
+        "image": "assets/recs/rec-01.svg"
+      },
+      {
+        "category": "色彩灵感",
+        "title": "低饱和器物",
+        "desc": "金属、米白、浅灰，空间更干净更高级。",
+        "image": "assets/recs/rec-02.svg"
+      },
+      {
+        "category": "构图美学",
+        "title": "主次关系",
+        "desc": "抬高构图重心，让主体更突出，背景更安静。",
+        "image": "assets/recs/rec-03.svg"
+      },
+      {
+        "category": "生活类美",
+        "title": "一杯奶咖",
+        "desc": "慢下来，感受生活细节，质感往往来自克制。",
+        "image": "assets/recs/rec-04.svg"
+      },
+      {
+        "category": "电影瞬间",
+        "title": "雾林层次",
+        "desc": "氛围感来自光与空气的层次，而不是复杂元素。",
+        "image": "assets/recs/rec-05.svg"
+      }
+    ]
+  },
+  "inspiration": {
+    "title": "孤独之树",
+    "author": "Julian Palacios",
+    "text1": "雾气、山峦、孤树。",
+    "text2": "它站在水中央，安静而稳定。最简单的画面，往往最有力量。",
+    "image": "assets/inspiration/lone-tree.svg"
+  },
+  "quote": {
+    "en": "Don't chase light. Understand light.",
+    "cn": "不要追逐光，先理解光。"
+  },
+  "selection": [
+    {
+      "title": "Photography by Clément Falize",
+      "desc": "冷静、克制、薄雾般的色彩层次。",
+      "image": "assets/curated/sel-01.svg"
+    },
+    {
+      "title": "Film Still",
+      "desc": "柔和人像与电影气氛，安静但有情绪。",
+      "image": "assets/curated/sel-02.svg"
+    },
+    {
+      "title": "Interior Design",
+      "desc": "简洁室内与金属器物的空间关系。",
+      "image": "assets/curated/sel-03.svg"
+    },
+    {
+      "title": "Product Design",
+      "desc": "产品轮廓、材质和阴影的平衡。",
+      "image": "assets/curated/sel-04.svg"
+    },
+    {
+      "title": "Architecture",
+      "desc": "几何结构、秩序和高级感的来源。",
+      "image": "assets/curated/sel-05.svg"
+    }
+  ],
+  "days": [
+    {
+      "date": "2026-07-02",
+      "metaDate": "2026 / 07 / 02 · 周四",
+      "am": {
+        "themeCn": "清晨的办公室空气感",
+        "themeEn": "Clean Morning Office",
+        "product": "F15",
+        "principle": "先让空间干净，产品才会显得高级。",
+        "trainingDesc": "训练明亮、干净、简洁的办公室画面。",
+        "training": [
+          {
+            "title": "观察光线",
+            "text": "先看自然光方向，再决定产品放置位置。"
+          },
+          {
+            "title": "理解空间",
+            "text": "只留下必要道具，让画面更整洁。"
+          },
+          {
+            "title": "拍摄思路",
+            "text": "保留留白，让主体更清晰。"
+          },
+          {
+            "title": "色彩情绪",
+            "text": "控制白色和木色，避免过黄。"
+          }
+        ],
+        "caseTitle": "F15 白色版｜清晨办公室案例",
+        "caseText": "木桌、冷白自然光、轻留白构图，传递干净、轻盈的办公气质。",
+        "image": "assets/cases/f15-office-am.svg"
+      },
+      "pm": {
+        "themeCn": "温暖的办公空间",
+        "themeEn": "Warm Office Lighting",
+        "product": "F15",
+        "principle": "光不是照亮产品，而是塑造空间。",
+        "trainingDesc": "今天只训练一个方向：干净、金属感、简洁场景。",
+        "training": [
+          {
+            "title": "观察光线",
+            "text": "先看光从哪里来，再决定产品放在哪里。"
+          },
+          {
+            "title": "理解空间",
+            "text": "只保留能说明场景的元素，让产品自然存在。"
+          },
+          {
+            "title": "拍摄思路",
+            "text": "主体不必填满画面，留白是高级感的一部分。"
+          },
+          {
+            "title": "色彩情绪",
+            "text": "用浅灰、米白、金属感建立干净克制的画面。"
+          }
+        ],
+        "caseTitle": "F15 白色版｜办公室空气感案例",
+        "caseText": "木质桌面、百叶光影、银白机感，传递通透而克制的办公氛围。",
+        "image": "assets/cases/f15-office-pm.svg"
+      }
+    },
+    {
+      "date": "2026-07-01",
+      "metaDate": "2026 / 07 / 01 · 周三",
+      "am": {
+        "themeCn": "简洁窗边咖啡角",
+        "themeEn": "Airy Coffee Corner",
+        "product": "F15",
+        "principle": "让产品有呼吸感。",
+        "trainingDesc": "训练明亮空间中的产品融入感。",
+        "training": [
+          {
+            "title": "看空气感",
+            "text": "先判断画面是否足够通透。"
+          },
+          {
+            "title": "减信息",
+            "text": "背景越少，主体越稳。"
+          },
+          {
+            "title": "留白",
+            "text": "让右侧留白承担空间气质。"
+          },
+          {
+            "title": "轻调色",
+            "text": "少调多保留真实材质。"
+          }
+        ],
+        "caseTitle": "F15 白色版｜窗边空气感案例",
+        "caseText": "通透、轻盈、自然，是这组场景的核心。",
+        "image": "assets/cases/f15-office-am.svg"
+      },
+      "pm": {
+        "themeCn": "余晖轻商务",
+        "themeEn": "Soft Sunset Business",
+        "product": "F15",
+        "principle": "柔和不是随意，是控制。",
+        "trainingDesc": "训练柔和晚间氛围和产品质感。",
+        "training": [
+          {
+            "title": "看晚光",
+            "text": "先找有温度但不过黄的光。"
+          },
+          {
+            "title": "控白色",
+            "text": "避免白机被暖光污染。"
+          },
+          {
+            "title": "压高光",
+            "text": "保住白色产品细节。"
+          },
+          {
+            "title": "减反差",
+            "text": "避免过于生硬的黑白对比。"
+          }
+        ],
+        "caseTitle": "F15 白色版｜余晖轻商务案例",
+        "caseText": "柔和暖光、稳定构图、金属与白色对比更有层次。",
+        "image": "assets/cases/f15-office-pm.svg"
+      }
+    }
+  ]
+}
