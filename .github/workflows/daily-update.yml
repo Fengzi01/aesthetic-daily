@@ -1,0 +1,45 @@
+name: Daily Aesthetic OS Update
+
+on:
+  workflow_dispatch:
+    inputs:
+      slot:
+        description: "Choose update slot"
+        required: true
+        default: "auto"
+        type: choice
+        options: [auto, am, pm]
+  schedule:
+    - cron: "30 23 * * *"
+    - cron: "30 10 * * *"
+
+permissions:
+  contents: write
+
+jobs:
+  update-daily-content:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate daily content
+        run: |
+          SLOT="${{ github.event.inputs.slot }}"
+          if [ -z "$SLOT" ]; then SLOT="auto"; fi
+          python scripts/generate_daily.py --slot "$SLOT"
+
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/content.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit."
+          else
+            git commit -m "Daily aesthetic update"
+            git push
+          fi
