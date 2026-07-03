@@ -1,32 +1,30 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1000" viewBox="0 0 1800 1000">
+<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="980" viewBox="0 0 1800 980">
 <defs>
-<linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#f5f6f8"/><stop offset="1" stop-color="#dfe4ea"/></linearGradient>
-<linearGradient id="desk" x1="0" x2="1"><stop offset="0" stop-color="#dce1e7"/><stop offset="1" stop-color="#ffffff"/></linearGradient>
-<linearGradient id="metal" x1="0" x2="1"><stop offset="0" stop-color="#ffffff"/><stop offset=".42" stop-color="#cbd2db"/><stop offset=".72" stop-color="#f7f8fa"/><stop offset="1" stop-color="#d8dde4"/></linearGradient>
-<filter id="sd"><feDropShadow dx="0" dy="28" stdDeviation="34" flood-color="#12151a" flood-opacity=".25"/></filter>
+<linearGradient id="bg" x1="0" x2="1"><stop offset="0" stop-color="#f4f6f8"/><stop offset="1" stop-color="#c8d0da"/></linearGradient>
+<linearGradient id="desk" x1="0" x2="1"><stop offset="0" stop-color="#d8dde4"/><stop offset="1" stop-color="#f8f9fb"/></linearGradient>
+<linearGradient id="metal" x1="0" x2="1"><stop offset="0" stop-color="#f8f9fa"/><stop offset=".35" stop-color="#bfc7d1"/><stop offset=".62" stop-color="#ffffff"/><stop offset="1" stop-color="#d2d8e0"/></linearGradient>
+<filter id="sd"><feDropShadow dx="0" dy="26" stdDeviation="36" flood-color="#101216" flood-opacity=".20"/></filter>
+<filter id="blur"><feGaussianBlur stdDeviation="14"/></filter>
 </defs>
-<rect width="1800" height="1000" fill="url(#bg)"/>
-<rect y="690" width="1800" height="310" fill="url(#desk)"/>
-<rect x="0" y="0" width="350" height="1000" fill="#101216" opacity=".08"/>
-<polygon points="1040,0 1140,0 860,1000 760,1000" fill="#fff" opacity=".35"/>
-<polygon points="1210,0 1290,0 1010,1000 940,1000" fill="#fff" opacity=".08"/>
-<polygon points="1390,0 1450,0 1190,1000 1130,1000" fill="#fff" opacity=".14"/>
-<ellipse cx="900" cy="765" rx="390" ry="70" fill="#05070a" opacity=".18"/>
+<rect width="1800" height="980" fill="url(#bg)"/>
+<rect y="680" width="1800" height="300" fill="url(#desk)" opacity=".92"/>
+<rect x="0" y="0" width="420" height="980" fill="#111318" opacity=".12"/>
+<polygon points="1010,0 1120,0 820,980 710,980" fill="#fff" opacity=".34"/>
+<polygon points="1190,0 1270,0 970,980 900,980" fill="#fff" opacity=".22"/>
+<polygon points="1370,0 1435,0 1150,980 1090,980" fill="#fff" opacity=".14"/>
+<ellipse cx="1010" cy="730" rx="470" ry="78" fill="#1b2028" opacity=".13" filter="url(#blur)"/>
+
 <g filter="url(#sd)">
-<rect x="695" y="275" width="410" height="440" rx="44" fill="url(#metal)"/>
-<rect x="760" y="345" width="270" height="175" rx="28" fill="#111319"/>
-<rect x="812" y="390" width="166" height="84" rx="16" fill="#25282d"/>
-<circle cx="895" cy="432" r="30" fill="#bda47c"/>
-<rect x="795" y="570" width="200" height="72" rx="18" fill="#1b1d22"/>
-<rect x="840" y="598" width="110" height="18" rx="9" fill="#bda47c"/>
-<rect x="665" y="345" width="58" height="320" rx="22" fill="#111319"/>
-<rect x="800" y="710" width="210" height="22" rx="11" fill="#e7ebf0"/>
+<rect x="960" y="250" width="360" height="310" rx="26" fill="url(#metal)"/>
+<rect x="1006" y="292" width="252" height="150" rx="18" fill="#111318"/>
+<rect x="1068" y="334" width="128" height="70" rx="10" fill="#2b3037"/>
+<circle cx="1132" cy="370" r="24" fill="#c0a77c"/>
+<rect x="1050" y="478" width="160" height="52" rx="14" fill="#1b1e23"/>
+<rect x="1085" y="498" width="88" height="12" rx="6" fill="#c0a77c"/>
+<rect x="930" y="292" width="54" height="230" rx="18" fill="#111318"/>
+<rect x="1070" y="560" width="150" height="16" rx="8" fill="#edf1f5"/>
 </g>
-<g opacity=".92">
-<rect x="1270" y="695" width="96" height="78" rx="18" fill="#f2f3f4"/>
-<path d="M1362 712 C1410 710 1412 758 1360 758" stroke="#f2f3f4" stroke-width="14" fill="none"/>
-<rect x="1430" y="653" width="136" height="92" rx="18" fill="#d9dee5" opacity=".72"/>
-<circle cx="1488" cy="618" r="31" fill="#6e7c68"/>
-<rect x="1482" y="646" width="9" height="72" fill="#5f665b"/>
-</g>
+<g opacity=".78"><rect x="1380" y="652" width="100" height="78" rx="18" fill="#ffffff"/><path d="M1476 670 C1530 668 1532 718 1474 718" stroke="#ffffff" stroke-width="15" fill="none"/><rect x="1540" y="612" width="138" height="96" rx="18" fill="#d9dee5" opacity=".72"/><circle cx="1596" cy="578" r="32" fill="#6d7d68"/><rect x="1590" y="606" width="10" height="76" fill="#60675f"/></g>
+<text x="72" y="118" font-family="Arial" font-size="18" letter-spacing="6" fill="#111318" opacity=".55">AESTHETIC REFERENCE</text>
+<text x="72" y="188" font-family="Arial" font-size="64" font-weight="700" fill="#111318" opacity=".86">Clean Metal Morning</text>
 </svg>
